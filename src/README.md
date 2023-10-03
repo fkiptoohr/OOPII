@@ -34,5 +34,15 @@ btn.addActionListener(new ActionListener() {
  }
 });
 ```
+### Lambda Listener
+Because the ActionListener interface defines only one method actionPerformed(), it is a functional interface
+which means there’s a place to use Lambda expressions to replace the boilerplate code. The above example can be
+re-written using Lambda expressions as follows:
+```agsl
+JButton btn = new JButton("My Button");
+btn.addActionListener(e -> {
+ System.out.println("Button was pressed");
+});
+```
 
 
