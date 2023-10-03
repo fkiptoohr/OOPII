@@ -21,6 +21,9 @@ public class EventExample {
             }
         });
 
+//        This achieves the same result as the anonymous inner class but with a more concise syntax.
+        button.addActionListener(e -> System.out.println("Button clicked!"));
+
         frame.getContentPane().add(button);
         frame.setSize(300, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

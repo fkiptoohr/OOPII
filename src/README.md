@@ -16,5 +16,23 @@ Here's a breakdown of how `invokeLater` works:
 
 In summary, `SwingUtilities.invokeLater` is a key tool for ensuring the proper functioning of Swing applications by facilitating safe modification of Swing components on the Event Dispatch Thread.
 
-### Anonymous Classes
+## Anonymous class listener
 In Java, anonymous listeners refer to the use of anonymous inner classes to implement listener interfaces or classes without explicitly defining a named class. Listeners are commonly used in graphical user interface (GUI) programming to handle events triggered by user actions such as button clicks or mouse movements.
+
+Anonymous listeners are a concise way to define event-handling logic without the need to create a separate class for each listener. They are often used for short, one-time implementations of listener interfaces. However, for more complex or reusable logic, it might be preferable to use a named class or a lambda expression (introduced in Java 8) for brevity.
+
+Before Java 8, it’s very common that an anonymous class is used to handle click event of a JButton, as shown in the
+following code. This example shows how to implement an anonymous listener within the scope of
+`btn.addActionListener`.
+ ### Code snippet
+```agsl
+JButton btn = new JButton("My Button");
+btn.addActionListener(new ActionListener() {
+ @Override
+ public void actionPerformed(ActionEvent e) {
+ System.out.println("Button was pressed");
+ }
+});
+```
+
+
